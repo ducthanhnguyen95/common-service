@@ -9,28 +9,17 @@ import repositories.CommentRepository;
 @Component
 public class CommentService {
 
-    private  CommentRepository commentRepository;
+    private final CommentRepository commentRepository;
 
-    private  CommentNotificationProxy commentNotificationProxy;
+    private final CommentNotificationProxy commentNotificationProxy;
 
-    @Autowired
-    public void setCommentRepository(CommentRepository commentRepository) {
-        this.commentRepository = commentRepository;
-    }
-
-    @Autowired
-    public void setCommentNotificationProxy(CommentNotificationProxy commentNotificationProxy) {
-        this.commentNotificationProxy = commentNotificationProxy;
-    }
-
-    //    /*
 //    We would have to use @Autowired if the class had more than one constructor.
 //    @Autowired
 //     */
-//    public CommentService (CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
-//        this.commentRepository = commentRepository;
-//        this.commentNotificationProxy = commentNotificationProxy;
-//    }
+    public CommentService (CommentRepository commentRepository, CommentNotificationProxy commentNotificationProxy) {
+        this.commentRepository = commentRepository;
+        this.commentNotificationProxy = commentNotificationProxy;
+    }
 
 
 
