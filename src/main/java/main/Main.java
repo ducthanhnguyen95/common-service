@@ -8,11 +8,11 @@ import services.CommentService;
 public class Main {
 
     public static void main(String[] args) {
-        var context = new AnnotationConfigApplicationContext(ProjectConfiguration.class);
-        var comment = new Comment();
-        comment.setAuthor("Laurentiu");
-        comment.setText("Demo comment");
-        var commentService = context.getBean(CommentService.class);
-        commentService.publishComment(comment);
+        var c = new AnnotationConfigApplicationContext(ProjectConfiguration.class);
+        CommentService cs1 = c.getBean("commentService", CommentService.class);
+        CommentService cs2 = c.getBean("commentService", CommentService.class);
+        boolean b1 = cs1 == cs2;
+        System.out.println(b1);
+
     }
 }
