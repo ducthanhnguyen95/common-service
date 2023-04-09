@@ -9,9 +9,9 @@ import services.CommentService;
 @ComponentScan(basePackages = {"proxies", "services", "repositories"})
 public class ProjectConfiguration {
 
-    @Bean
-    public CommentService commentService () {
-        return new CommentService();
-    }
+//    @Bean
+//    public CommentService commentService () {
+//        return new CommentService();
+//    }
 
 }
