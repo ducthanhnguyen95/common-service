@@ -5,12 +5,12 @@ import repositories.CommentRepository;
 import repositories.DBCommentRepository;
 
 @Service
-public class CommentService {
+public class UserService {
 
     private final DBCommentRepository dbCommentRepository;
 
 
-    public CommentService(DBCommentRepository dbCommentRepository) {
+    public UserService(DBCommentRepository dbCommentRepository) {
         this.dbCommentRepository = dbCommentRepository;
     }
 

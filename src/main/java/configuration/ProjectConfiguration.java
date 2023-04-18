@@ -8,13 +8,9 @@ import org.springframework.context.annotation.Scope;
 import services.CommentService;
 
 @Configuration
-//@ComponentScan(basePackages = {"proxies", "services", "repositories"})
+@ComponentScan(basePackages = {"proxies", "services", "repositories"})
 public class ProjectConfiguration {
 
-    @Bean
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-    public CommentService commentService() {
-        return new CommentService();
-    }
+
 }
 
